@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if error == 'invalid credentials' %}
+        <p>Invalid credentials</p>
+        <a href="/login">try again</a>
+    {% elif error == 'missing data' %}
+        <p>Missing data</p>
+        <a href="/register">try again</a>
+    {% elif error == 'the username is taken' %}
+        <p>The username is taken. Try another</p>
+        <a href="/register">try again</a>
+    {% elif error == 'missing task' %}
+        <p>Missing task</p>
+        <a href="/add_task">try again</a>
+    {% else %}
+        <p>Missing update task</p>
+        <a href="/task_manager">try again</a>
+    {% endif %}
+</body>
+</html>
